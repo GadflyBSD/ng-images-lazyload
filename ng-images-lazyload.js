@@ -262,7 +262,7 @@ angular.module('ngImagesLazyload', [])
 				return q.promise;
 			},
 			/**
-			 * # 缓存图片（如果本地系统中已有则返回本地图片）
+			 * # 缓存图片（如果本地系统中已有则返回本地图片地址）
 			 * @param url           需要缓存图片的url地址
 			 * @param loadingImg    缓存图片前展示的正在加载中的图片
 			 * @param defaultImg    默认图片用于加载图片的url地址时出错的情况展示的本地图片地址
