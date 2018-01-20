@@ -19,3 +19,24 @@
         - `@param filename` 所需要验证的本地文件系统的指定文件的路径和文件名
         - `@param physicalPath` 文件系统的方向， 默认为 `cache`
     - 返回 `promise`
+    
+* ### `fileFactory.mkdir(dir, physicalPath)`
+    - ### 创建单层本地文件系统目录
+    - 参数
+        - `@param dir` 所需要创建的本地文件目录
+        - `@param physicalPath` 文件系统的方向， 默认为 `cache`
+    - 返回 `promise`
+    
+* ### `fileFactory.mkdirs(dirs, physicalPath)`
+    - ### 递归创建目录及其子目录
+    - 参数
+         - `@param dirs` 所需创建的目录及子目录
+         - `@param physicalPath` 文件系统的方向， 默认为 `cache`
+    - 返回 `promise`
+    
+* ### `fileFactory.getUrlFilename(path, isThumb)`
+    - ### 获取文件的路径和文件名信息
+    - 参数
+        - `@param path` 文件的路径和文件名的拼装字符串
+        - `@param isThumb` 是否需要进行缩略图处理
+    - 返回 `Object {path, name}`

@@ -99,7 +99,7 @@ angular.module('ngImagesLazyload', [])
 				return q.promise;
 			},
 			/**
-			 * # 创建单一本地文件系统目录
+			 * # 创建单层本地文件系统目录
 			 * @param dir           所需要创建的本地文件目录
 			 * @param physicalPath  文件系统的方向， 默认为 `cache`
 			 */
@@ -115,10 +115,10 @@ angular.module('ngImagesLazyload', [])
 			},
 			/**
 			 * # 递归创建目录及其子目录
-			 * @param dir           所需创建的目录机器子目录
+			 * @param dirs          所需创建的目录及子目录
 			 * @param physicalPath  文件系统的方向， 默认为 `cache`
 			 */
-			mkdirs: function(dir, physicalPath) {
+			mkdirs: function(dirs, physicalPath) {
 				physicalPath = physicalPath || config.physicalPath;
 				var q = $q.defer();
 				var createDir = function(rootDir, folders, fullPath, callback) {
@@ -148,20 +148,21 @@ angular.module('ngImagesLazyload', [])
 					});
 				};
 				window.resolveLocalFileSystemURL(this.getSystemPath(physicalPath), function(dirEntry) {
-					createDir(dirEntry, dir, dir, function(result){
+					createDir(dirEntry, dirs, dirs, function(result){
 						q.resolve(result);
 					});
 				});
 				return q.promise;
 			},
 			/**
-			 * # 获取url的路径和文件名信息
-			 * @param url
-			 * @return {{path, name}}
+			 * # 获取文件的路径和文件名信息
+			 * @param path              文件的路径和文件名的拼装字符串
+			 * @param isThumb           是否需要进行缩略图处理
+			 * @return Object {path, name}
 			 */
-			getUrlFilename: function(url, isThumb){
+			getUrlFilename: function(path, isThumb){
 				isThumb = isThumb || false;
-				var request = url.split('/');
+				var request = path.split('/');
 				if(isThumb)
 					return {path: request[request.length-3] + '/' + request[request.length-2], name: request[request.length-1]};
 				else
