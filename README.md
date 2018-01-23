@@ -45,7 +45,7 @@
     - ### 向本地文件系统的指定文件写入数据
     - 参数
         - `@param filename` 需要写入的文件名
-        - `@param dataObj` 需要写入的数`据
+        - `@param dataObj` 需要写入的数据
         - `@param isThumb` 是否是图片缓存
         - `@param rootDir` 缓存文件系统的根路径， 默认为 `appImages/`
         - `@param physicalPath` 缓存文件系统的方向， 默认为 `cache`
@@ -113,7 +113,7 @@
     - 返回 `promise`
     
 ## 三、angular 的图像资源延迟加载指令
-> `lazy-src` 指令修改自 [me-lazyload](https://github.com/Wyntau/me-lazyload)，在`me-lazyload`的基础上新增了图片资源本地数据缓存功能。
+> `lazy-src` 通过这个指令，您可以实现懒加载图像。指令修改自 [me-lazyload](https://github.com/Wyntau/me-lazyload)，在`me-lazyload`的基础上新增了图片资源本地数据缓存功能。
 * ### 基本用法（Basic Usage）
     1 将ng-images-lazyload.js 依赖注入.（ include ng-images-lazyload.js as dependence.）
     ``` javascript
@@ -128,7 +128,7 @@
     <img load-src="{{imgUrl}}" animate-visible="true" animate-speed="0.5s" alt="" />
     ```
     
-> `lazy-img` 通过这个指令，您金额一懒加载图像，你也可以在特定的元素具有`overflow: auto` 或 `overflow:scroll` css的样式中使用。指令修改自 [me-lazyimg](https://github.com/Wyntau/me-lazyimg)，在`me-lazyimg`的基础上新增了图片资源本地数据缓存功能。
+> `lazy-img` 通过这个指令，您可以实现懒加载图像，你也可以在特定的元素具有`overflow: auto` 或 `overflow:scroll` css的样式中使用。指令修改自 [me-lazyimg](https://github.com/Wyntau/me-lazyimg)，在`me-lazyimg`的基础上新增了图片资源本地数据缓存功能。
 * ### 基本用法（Basic Usage）
     1 在可滚动的容器中加入 `lazy-container`
     ```html
@@ -139,7 +139,7 @@
     <img lazy-src="{{imgUrl}}" alt="" />
     ```
     
-    > 所有附加参数的列表
+> 所有附加参数的列表
     
 参数 | 说明 | 参数值 | 默认值
 ---|---|---|---
