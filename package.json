@@ -1,0 +1,24 @@
+{
+  "name": "ng-images-lazyload",
+  "version": "1.0.1",
+  "description": "> 在ionic中实现了下面功能（PC web环境尚未测试） > 1. 基于File API的本地文件服务 > 2. 图片懒加载 > 3. 网络图片第一次向本地文件系统进行缓存",
+  "main": "ng-images-lazyload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GadflyBSD/ng-images-lazyload.git"
+  },
+  "keywords": [
+    "angularJS",
+    "laxyload",
+    "images"
+  ],
+  "author": "gadflybsd@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GadflyBSD/ng-images-lazyload/issues"
+  },
+  "homepage": "https://github.com/GadflyBSD/ng-images-lazyload#readme"
+}
