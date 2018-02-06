@@ -5,7 +5,18 @@
 > 2. 图片懒加载
 > 3. 网络图片第一次向本地文件系统进行缓存
 
-## 一、`fileFactory` 服务 `API`
+## 一、安装
+* 使用`GIT`克隆
+```cmd
+git clone https://github.com/GadflyBSD/ng-images-lazyload.git
+```
+
+* 使用`NPM`安装
+```cmd
+npm install ng-images-lazyload
+```
+
+## 二、`fileFactory` 服务 `API`
 * ### `fileFactory.checkDir(dir, physicalPath)`
     - #### 验证本地文件系统中指定目录的合法性
     - 参数
