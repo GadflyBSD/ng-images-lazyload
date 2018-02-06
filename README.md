@@ -1,4 +1,5 @@
 # angularJs下网络图片的本地缓存和异步加载
+AngularJS HTTP request cache for IndexeDB and $cacheFactory
 
 > 在ionic中实现了下面功能（PC web环境尚未测试）
 > 1. 基于File API的本地文件服务
